@@ -7,7 +7,7 @@ void PrintCalendar(int firstday);
 
 int main(void)
 {
-    int firstday;
+    int firstday = 0;
     do{
         cout << "iupt the day of the first day: ";
         cin >> firstday;
@@ -35,20 +35,29 @@ void PrintCalendar(int firstday)
     }
     printf("%2d", data);
 
+    if(firstdayTran != 6)
+    {
+        printf("  ");
+    }
+    else
+    {
+        printf("\n");
+    }
+
     for(data = 2; data <= 31 ; data++)
     {
 
         int today = (firstdayTran + data - 1) % 7;
-        if( today != 0)
-        {
-            printf("  ");
-        }
 
         printf("%2d", data);
 
         if( today == 6)
         {
             printf("\n");
+        }
+        else
+        {
+            printf("  ");
         }
     }
     printf("\n");
