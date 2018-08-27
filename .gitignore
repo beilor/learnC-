@@ -1,3 +1,6 @@
+# only include file with suffix
+*
+!*.*
+
 # do not include the .out file 
 *.out
-
